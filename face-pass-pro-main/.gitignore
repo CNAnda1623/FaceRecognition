@@ -1,0 +1,76 @@
+# -----------------------------
+# 🔥 FRONTEND IGNORE
+# -----------------------------
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.lockb
+*.bun
+
+# Vite
+.vite/
+
+# Env files (KEEP SECRET)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# -----------------------------
+# 🔥 BACKEND (Python) IGNORE
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python virtual environment
+venv/
+env/
+.venv/
+
+# FastAPI uvicorn logs
+*.log
+
+# -----------------------------
+# 🔥 APP SENSITIVE DATA (from your screenshot)
+# -----------------------------
+# Attendance CSV files
+src/backend/Attendance/
+src/backend/Attendance/*
+
+# Face images + training data
+src/backend/static/faces/
+src/backend/static/faces/*
+
+# Trained ML Model
+src/backend/static/face_recognition_model.pkl
+
+# -----------------------------
+# 🔥 GENERAL
+# -----------------------------
+Thumbs.db
+*.tmp
+*.cache
+*.bak
+*.swp
