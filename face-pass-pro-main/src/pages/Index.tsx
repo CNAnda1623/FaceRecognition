@@ -32,24 +32,23 @@ const Index = () => {
   useEffect(() => {
     const checkBackend = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/api/stats`);
-        if (response.ok) {
-          setIsBackendConnected(true);
-          const data = await response.json();
-          setStats({
-            totalUsers: data.total_users,
-            todayAttendance: data.today_attendance,
-            modelTrained: data.model_trained,
-          });
-        } else {
-          setIsBackendConnected(false);
-        }
-      } catch {
+        const res = await fetch(`${API_BASE_URL}/api/stats`, { cache: "no-store" });
+        if (!res.ok) { setIsBackendConnected(false); return; }
+        const data = await res.json();
+        // If your backend returns minimal object, still treat it as OK:
+        setIsBackendConnected(true);
+        setStats({
+          totalUsers: data.total_users ?? 0,
+          todayAttendance: data.today_attendance ?? 0,
+          modelTrained: !!data.model_trained,
+        });
+      } catch (e) {
         setIsBackendConnected(false);
       }
     };
     checkBackend();
-  }, []); // you can add [API_BASE_URL] if you want, but not required
+  }, []);
+ // you can add [API_BASE_URL] if you want, but not required
 
 
 
