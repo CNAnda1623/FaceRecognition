@@ -11,7 +11,7 @@ interface RegisterUserProps {
   isBackendConnected: boolean;
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://facerecognition-i3a2.onrender.com";
 
 export function RegisterUser({ onUserRegistered, isBackendConnected }: RegisterUserProps) {
   const [name, setName] = useState("");

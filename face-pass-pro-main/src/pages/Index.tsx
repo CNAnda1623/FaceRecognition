@@ -5,7 +5,7 @@ import { StatsCard } from "@/components/StatsCard";
 import { RegisterUser } from "@/components/RegisterUser";
 import { LiveRecognition } from "@/components/LiveRecognition";
 import { AttendanceTable } from "@/components/AttendanceTable";
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://facerecognition-i3a2.onrender.com";
 
 
 // Demo data for when backend is not connected

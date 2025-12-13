@@ -14,7 +14,7 @@ interface LiveRecognitionProps {
   onAttendanceMarked: () => void;
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://facerecognition-i3a2.onrender.com";
 
 export function LiveRecognition({ isBackendConnected, onAttendanceMarked }: LiveRecognitionProps) {
   const [isRunning, setIsRunning] = useState(false);

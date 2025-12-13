@@ -1,6 +1,6 @@
 // API Configuration
 // Change this to your deployed Python backend URL
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://facerecognition-i3a2.onrender.com';
 
 export interface Stats {
   total_users: number;
